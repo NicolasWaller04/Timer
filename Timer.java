@@ -17,7 +17,7 @@ public class Timer {
             entrada.nextLine();
 
             timer.detener();
-            System.out.println(timer.ObtenerTiempo() + " segundos");
+            System.out.println(timer.ObtenerTiempo() + " s");
         }
     }
 }
