@@ -5,13 +5,13 @@ public class Timer {
         ArrayList <Double> ListaTiempos2x2x2 = new ArrayList <> ();
         double MejorTiempo = 9999;
         double Tiempos;
-        System.out.println("Vas a armar un 2x2x2 o un 3x3x3 responde (2x2x2 o 3x3x3)");
-        try (Scanner cubo = new Scanner (System.in)){
-            String QueCubo = cubo.nextLine().toLowerCase();
-            if (QueCubo.equals("3x3x3")){
-                for (int i = 0; i < 9999; i++){
-                    int num = 1;
-                    try (Scanner sc = new Scanner(System.in)){
+        try (Scanner sc = new Scanner(System.in)){
+            System.out.println("Vas a armar un 2x2x2 o un 3x3x3 responde (2x2x2 o 3x3x3)");
+            try (Scanner cubo = new Scanner (System.in)){
+                String QueCubo = cubo.nextLine().toLowerCase();
+                if (QueCubo.equals("3x3x3")){
+                    for (int i = 0; i < 9999; i++){
+                        int num = 1;
                         System.out.println("Mezcla:");
                         System.out.println(Scramble3x3x3.RandomMezcla3x3x3(20));
                         System.out.println("Presiona ENTER para iniciar el cronometro");
@@ -37,11 +37,9 @@ public class Timer {
                         System.out.println(MejorTiempo);
                         System.out.println("===============");
                     }
-                }    
-            }else if (QueCubo.equals("2x2x2")){
-                for (int i = 0; i < 9999; i++){
-                    int num = 1;
-                    try (Scanner sc = new Scanner(System.in)){
+                }else if (QueCubo.equals("2x2x2")){
+                    for (int i = 0; i < 9999; i++){
+                        int num = 1;
                         System.out.println("Mezcla:");
                         System.out.println(Scramble2x2x2.RandomMezcla2x2x2(20));
                         System.out.println("Presiona ENTER para iniciar el cronometro");
