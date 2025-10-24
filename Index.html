@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Timer</title>
+</head>
+<body>
+  <button id="run">Ejecutar Timer</button>
+  <div id="out" style="white-space:pre-wrap; margin-top:1em;"></div>
+
+  <script>
+    document.getElementById('run').addEventListener('click', async () => {
+      const div = document.getElementById('out');
+      div.textContent = 'Ejecutando...';
+      try {
+        const res = await fetch('/run');
+        const text = await res.text();
+        div.innerHTML = text;
+      } catch (e) {
+        div.textContent = 'Error: ' + e;
+      }
+    });
+  </script>
+</body>
+</html>
