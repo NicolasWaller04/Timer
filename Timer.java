@@ -35,6 +35,7 @@ public class Timer {
                     System.out.println("Tu mejor tiempo es de:");
                     System.out.println(MejorTiempo);
                     System.out.println("===============");
+                    sc.close();
                 }
             }else if (QueCubo.equals("2x2x2")){
                 for (int i = 0; i < 9999; i++){
@@ -63,7 +64,7 @@ public class Timer {
                     System.out.println("Tu mejor tiempo es de:");
                     System.out.println(MejorTiempo);
                     System.out.println("===============");
-                    
+                    sc.close();
                 } 
             }
         }
