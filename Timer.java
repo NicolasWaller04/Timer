@@ -66,7 +66,7 @@ public class Timer {
                     System.out.println("===============");
                     sc.close();
                 } 
-            }
+            } 
         }
     }
 }
